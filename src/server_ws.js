@@ -21,6 +21,7 @@ const wss = new WebSocket.Server({server});
 const sockets=[];
 
 //socket - 연결과 그에 대한 정보
+//WSS에 이벤트 리스너를 추가하는 것이 아닌 socket에 이벤트 리스너를 추가함
 // on - 이벤트 리스너,  파라미터로 콜백함수 호출,
 wss.on("connection", (socket)=>{
     sockets.push(socket);
